@@ -1,0 +1,35 @@
+#. Download and install miniconda ::
+
+   wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
+   bash Miniconda-latest-Linux-x86_64.sh
+
+
+#. Get conda-recipes repositories ::
+
+   git clone https://github.com/pkgw/conda-recipes
+   git clone https://github.com/conda/conda-recipes
+   git clone https://github.com/NSLS-II/conda-prescriptions
+
+
+#. Install with conda ::
+
+   conda install conda-build jinja2
+
+
+#. create hkl conda environment ::
+
+   conda create -n hkl python=2
+
+
+#. Install with apt-get ::
+
+   sudo apt-get install gcc zlib1g-dev libffi-dev pkg-config gettext make flex bison gtk-doc-tools libgsl0-dev
+
+#. Build conda recipes in this order
+
+   #. glib
+   #. cairo-gobject
+   #. gobject-introspection
+   #. gsl
+   #. hkl
+

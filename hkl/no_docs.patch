@@ -1,0 +1,26 @@
+diff --git a/configure.ac b/configure.ac
+index 4de559a..7d9ace2 100644
+--- configure.ac
++++ configure.ac
+@@ -136,7 +136,7 @@ AM_COND_IF([HKL_DOC],
+ 	   ])
+ 
+ dnl *** gtk-doc ***
+-GTK_DOC_CHECK([1.9],[--flavour no-tmpl])
++dnl GTK_DOC_CHECK([1.9],[--flavour no-tmpl])
+ 
+ dnl *******************************
+ dnl *** add an option for hkl3d ***
+@@ -284,12 +284,6 @@ AC_CONFIG_FILES([Makefile
+ 		 tests/Makefile
+ 		 tests/bindings/Makefile
+ 		 tests/tap/Makefile
+-		 Documentation/Makefile
+-		 Documentation/hkl.org
+-		 Documentation/api/Makefile
+-		 Documentation/figures/Makefile
+-		 Documentation/sphinx/Makefile
+-		 Documentation/sphinx/source/conf.py
+ 		 gui/Makefile
+ 		 data/Makefile
+ ])
